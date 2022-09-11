@@ -1,6 +1,6 @@
 # Skyscraper Puzzle Algorithm
 
-#### Algorithm of Skyscraper Puzzle, a sudoku variation.
+#### Algorithm to resolve a Skyscraper Puzzle, a sudoku variation.
 
 ## Usage
 
