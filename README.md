@@ -2,6 +2,8 @@
 
 #### Algorithm to resolve a Skyscraper Puzzle, a sudoku variation.
 
+
+
 ## Usage
 
 Compile files running the Makefile command
@@ -9,6 +11,7 @@ Compile files running the Makefile command
 ```sh
 make all
 ```
+
 
 Run the program with 
 
