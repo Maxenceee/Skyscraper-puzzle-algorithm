@@ -12,6 +12,17 @@ Compile files running the Makefile command
 make all
 ```
 
+Clean temp files running the Makefile command
+
+```sh
+make clean
+```
+
+Clean all files running the Makefile command
+
+```sh
+make fclean
+```
 
 Run the program with 
 
