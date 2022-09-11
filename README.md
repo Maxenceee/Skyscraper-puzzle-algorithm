@@ -13,5 +13,5 @@ make all
 Run the program with 
 
 ```sh
-./rush-01 "/* Skyscraper Puzzle patern */"
+./rush-01 \"/* Skyscraper Puzzle patern */\"
 ```
