@@ -16,7 +16,7 @@ int check_arguments(int argc, char *argv[])
 	return (0);
 }
 
-int *convert_patern(char *str)
+int *convert_pattern(char *str)
 {
 	int *tab;
 	int i;

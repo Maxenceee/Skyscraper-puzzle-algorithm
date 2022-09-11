@@ -29,7 +29,7 @@ int check_adjacent_cell(int grid[4][4], int gap, int num)
 	return (0);
 }
 
-int puzzle_solver(int grid[4][4], int patern[16], int gap)
+int puzzle_solver(int grid[4][4], int pattern[16], int gap)
 {
 	int size;
 
@@ -44,10 +44,10 @@ int puzzle_solver(int grid[4][4], int patern[16], int gap)
 			/* put new number in the grid */
 			grid[gap / 4][gap % 4] = size;
 			/* check if new number is correct */
-			if (check_cell(grid, gap, patern) == 0)
+			if (check_cell(grid, gap, pattern) == 0)
 			{
 				/* go to next solve */
-				if (puzzle_solver(grid, patern, gap + 1) == 1)
+				if (puzzle_solver(grid, pattern, gap + 1) == 1)
 					return (1);
 			}
 			/* if not remove it */
@@ -70,17 +70,17 @@ int main(int argc, char *argv[])
 		{0, 0, 0, 0},
 		{0, 0, 0, 0},
 	};
-	int *patern;
+	int *pattern;
 
 	/* if incorrect arguments end the program */
 	if (check_arguments(argc, argv) == 1)
 	{
 		return (0);
 	}
-	/* convert the string patern as an array of `int` */
-	patern = convert_patern(argv[1]);
+	/* convert the string pattern as an array of `int` */
+	pattern = convert_pattern(argv[1]);
 	/* call main program function, if a solution is found display it */
-	if (puzzle_solver(grid, patern, 0) == 1)
+	if (puzzle_solver(grid, pattern, 0) == 1)
 	{
 		print_puzzle_grid(grid);
 	}
