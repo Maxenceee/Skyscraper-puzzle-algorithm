@@ -2,7 +2,7 @@ CC=cc
 CFILES=$(shell find sources -type f -name "*.c")
 HEADERS_DIR=includes/
 CFLAGS=-Wall -Wextra -Werror -I $(HEADERS_DIR)
-NAME=rush-01
+NAME=puzzle
 OBJS=${CFILES:.c=.o}
 
 all: $(OBJS)
