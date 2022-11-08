@@ -1,2 +1,4 @@
 *.o
 rush-01
+Icon
+.gitignore
