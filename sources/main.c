@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mgama <mgama@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/08 13:51:34 by mgama             #+#    #+#             */
+/*   Updated: 2022/11/08 13:54:04 by mgama            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "main.h"
 #include "solving.h"
 #include "parsing.h"
@@ -9,16 +21,16 @@ int check_adjacent_cell(int grid[4][4], int gap, int num)
 	int i;
 
 	i = 0;
-	/* for each columns */
+	/* for each columns of the grid */
 	while (i < gap / 4)
 	{
-		/* test if num is present */
+		/* test if the value of `num` is present */
 		if (grid[i][gap % 4] == num)
 			return (1);
 		i++;
 	}
 	i = 0;
-	/* for each rows */
+	/* for each rows of the grid */
 	while (i < gap % 4)
 	{
 		/* test if num is present */
