@@ -1,22 +1,26 @@
-CC			=	cc
 CFILES		=	sources/main.c sources/generic.c sources/parsing.c sources/solving.c
+OBJS		=	${CFILES:.c=.o}
 HEADERS_DIR	=	includes/
+
+CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror -I $(HEADERS_DIR)
 NAME		=	puzzle
-OBJS		=	${CFILES:.c=.o}
+RM			=	rm -f
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADERS_DIR)
+%.o: %.c		$(HEADERS_DIR) Makefile
+				$(CC) $(CFLAGS) -c $< -o $@ -I $(HEADERS_DIR)
 
-all: $(OBJS) $(HEADERS_DIR) Makefile
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+all:			$(NAME)
+
+$(NAME):		$(OBJS)
+				$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
-	rm -rf $(OBJS)
+				$(RM) $(OBJS)
 
-fclean: clean
-	rm -f $(NAME)
+fclean:			clean
+				$(RM) $(NAME)
 
-re: fclean all
+re:				fclean all
 
-.PHONY: all clean fclean re
+.PHONY:			all clean fclean re
